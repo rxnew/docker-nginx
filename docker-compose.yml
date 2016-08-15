@@ -6,8 +6,8 @@ services:
     container_name: nginx
     hostname: nginx
     volumes:
-      - ./files:/etc/nginx/conf.d
       - /etc/localtime:/etc/localtime:ro
+      - ./files:/etc/nginx/conf.d
     networks:
       - gitbucket_default
     ports:
