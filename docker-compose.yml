@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  nginx:
+    image: nginx
+    container_name: nginx
+    hostname: nginx
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "${NGINX_EXTERNAL_PORT}:80"

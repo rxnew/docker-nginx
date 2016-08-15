@@ -1,0 +1,16 @@
+*.[a|o]
+*~
+\#*\#
+*.bak
+.svn/
+GPATH
+GRTAGS
+GSYMS
+GTAGS
+/build/*
+!.gitkeep
+!/lib/*.a
+/volume/*
+!/volume/.gitkeep
+/env/*
+!/env/.gitkeep
