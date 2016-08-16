@@ -13,4 +13,4 @@ https://docs.docker.com/compose/install/
 ### Run containers
     $ docker-compose up -d
 
-[gitbucket]: ../docker_gitbucket
+[gitbucket]: http://192.168.100.16/gitbucket/ngc_developers/docker_gitbucket
