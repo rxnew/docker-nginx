@@ -10,7 +10,4 @@ GTAGS
 /build/*
 !.gitkeep
 !/lib/*.a
-/volume/*
-!/volume/.gitkeep
-/env/*
-!/env/.gitkeep
+*.env
