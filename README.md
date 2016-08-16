@@ -2,6 +2,9 @@
 ### Install docker-compose
 https://docs.docker.com/compose/install/
 
+### Dependence
+[GitBuket on Docker][gitbucket]
+
 ### Settings
     $ cp .env.template .env
     $ vi .env # Edit
@@ -9,3 +12,5 @@ https://docs.docker.com/compose/install/
 
 ### Run containers
     $ docker-compose up -d
+
+[gitbucket]: ../docker_gitbucket
