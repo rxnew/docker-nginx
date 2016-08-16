@@ -8,5 +8,4 @@ https://docs.docker.com/compose/install/
     $ source set_environments .env
 
 ### Run containers
-    $ export HTTPD_EXTERNAL_PORT=[port]
     $ docker-compose up -d
