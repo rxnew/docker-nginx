@@ -1,4 +1,4 @@
-env_file=".env.template"
+env_file=.env
 
 if [ $# -eq 1 ]; then
     env_file=${1}

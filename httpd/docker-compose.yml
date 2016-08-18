@@ -7,9 +7,17 @@ services:
     hostname: httpd
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - ./files:/etc/nginx/conf.d
-    external_links:
-      - ${GITBUCKET_CONTAINER_NAME}:gitbucket
+      - ./files/default.conf.template:/etc/nginx/conf.d/default.conf.template
+      - ./files/generate_conf.sh:/etc/nginx/conf.d/generate_conf.sh
+      - ./.env:/etc/nginx/conf.d/.env
+    networks:
+      - gitbucket_default
     ports:
       - ${HTTPD_EXTERNAL_PORT}:80
-    restart: always
+    env_file: .env
+    command: /bin/sh -c "/etc/nginx/conf.d/generate_conf.sh && nginx -g 'daemon off;'"
+
+networks:
+  gitbucket_default:
+    external:
+      name: ${GITBUCKET_NETWORK_NAME}
