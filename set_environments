@@ -1,9 +1,0 @@
-ENV_FILE=".env.template"
-
-if [ $# -eq 1 ]; then
-    ENV_FILE=${1}
-fi
-
-source ${ENV_FILE}
-
-export HTTPD_EXTERNAL_PORT=${HTTPD_EXTERNAL_PORT}

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-name="nginx"
+name="httpd"
 shell="/bin/sh"
 
 command docker exec -it ${name} ${shell}

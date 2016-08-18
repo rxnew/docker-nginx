@@ -1,0 +1,11 @@
+env_file=".env.template"
+
+if [ $# -eq 1 ]; then
+    env_file=${1}
+fi
+
+source $env_file
+
+export HTTPD_EXTERNAL_PORT=$HTTPD_EXTERNAL_PORT
+export GITBUCKET_CONTAINER_NAME=$GITBUCKET_CONTAINER_NAME
+export GITBUCKET_NETWORK_NAME=$GITBUCKET_NETWORK_NAME

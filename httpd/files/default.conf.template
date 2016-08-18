@@ -4,6 +4,6 @@ server {
     proxy_set_header Host $http_host;
 
     location /gitbucket {
-        proxy_pass http://gitbucket.gitbucket_default:8080;
+        proxy_pass http://${GITBUCKET_CONTAINER_NAME}.${GITBUCKET_NETWORK_NAME}:8080;
     }
 }
