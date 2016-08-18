@@ -16,6 +16,7 @@ services:
       - ${HTTPD_EXTERNAL_PORT}:80
     env_file: .env
     command: /bin/sh -c "/etc/nginx/conf.d/generate_conf.sh && nginx -g 'daemon off;'"
+    restart: always
 
 networks:
   gitbucket_default:
