@@ -1,7 +1,7 @@
 version: '2'
 
 services:
-  nginx:
+  httpd:
     image: nginx:alpine
     container_name: httpd
     hostname: httpd
@@ -12,5 +12,4 @@ services:
       - ${GITBUCKET_CONTAINER_NAME}:gitbucket
     ports:
       - ${HTTPD_EXTERNAL_PORT}:80
-    command: /bin/sh -c '/etc/nginx/conf.d/envsubst.sh'
     restart: always
